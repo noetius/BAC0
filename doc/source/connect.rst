@@ -13,6 +13,22 @@ Example::
     # Define a controller (this one is on MSTP #3, MAC addr 4, device ID 5504)    
     mycontroller = BAC0.device('3:4', 5504, bacnet)
 
+Example::
+
+    import BAC0
+    bacnet = BAC0.connect()
+
+    # Define a controller (this one is on IP 192.168.1.25, device ID 1193)
+    mycontroller = BAC0.device('192.168.1.25', 1193, bacnet)
+
+Example::
+
+    import BAC0
+    bacnet = BAC0.connect()
+
+    # Define a controller (this one is on IP 192.168.10.36, udp port 47809, device ID 2064)
+    # Default UDP port is 47808
+    mycontroller = BAC0.device('192.168.10.36:47809', 2064, bacnet)
 
 Look for points in controller
 -----------------------------
